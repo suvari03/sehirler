@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sehirler</title>
+</head>
+<body>
+    <h1>Şehirlerimiz</h1>
+    <label for="">Listeye 10 adet şehir girin  :</label>
+    <input type="text" id="sehir">
+    <button onclick="ekle()" > Listeye Ekle </button>
+    <hr>
+    <p id="sehirText" ></p>
+    <br>
+    <p id="demo"></p>
+
+    <script>
+        let sehirler = [  ];
+        document.getElementById('sehirText').innerHTML = sehirler;
+        
+        function ekle(){
+          
+            
+            console.log( ' button çalıştı');
+            let sehir = document.getElementById('sehir').value;
+            
+            sehirler.push(sehir);
+            
+            
+                document.getElementById('sehir').value = '';
+            console.log(sehirler);
+            
+           
+            sehirler.sort() ;
+        document.getElementById('sehirText').innerHTML = sehirler;  
+                
+        document.getElementById('demo').innerHTML = 'ankara listedeki sırası : ' + (sehirler.indexOf( 'ankara' ) + 1 );
+    }
+        
+        </script>
+</body>
+</html>
