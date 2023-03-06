@@ -15,29 +15,18 @@
     <p id="sehirText" ></p>
     <br>
     <p id="demo"></p>
-
+<!-- elinize sağlık, güzel olmuş, kodlama yaparken 'clean code' prensipleri çerçevesinde düzenli kod yazımı ve gereksiz satırların temizlenmesine dikkat:) -->
     <script>
         let sehirler = [  ];
         document.getElementById('sehirText').innerHTML = sehirler;
-        
         function ekle(){
-          
-            
-            console.log( ' button çalıştı');
             let sehir = document.getElementById('sehir').value;
-            
             sehirler.push(sehir);
-            
-            
-                document.getElementById('sehir').value = '';
-            console.log(sehirler);
-            
-           
+            document.getElementById('sehir').value = '';
             sehirler.sort() ;
-        document.getElementById('sehirText').innerHTML = sehirler;  
-                
-        document.getElementById('demo').innerHTML = 'ankara listedeki sırası : ' + (sehirler.indexOf( 'ankara' ) + 1 );
-    }
+            document.getElementById('sehirText').innerHTML = sehirler;  
+            document.getElementById('demo').innerHTML = 'ankara listedeki sırası : ' + (sehirler.indexOf( 'ankara' ) + 1 );
+        }
         
         </script>
 </body>
